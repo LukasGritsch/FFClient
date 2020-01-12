@@ -1,0 +1,11 @@
+/home/lukas/git/FFClient/src/main/java/ffclient/db/types/TCategory.java
+/home/lukas/git/FFClient/src/main/java/ffclient/pane/TTreePane.java
+/home/lukas/git/FFClient/src/main/java/ffclient/db/types/TUser.java
+/home/lukas/git/FFClient/src/main/java/ffclient/pane/TMainPane.java
+/home/lukas/git/FFClient/src/main/java/ffclient/pane/TEntryPane.java
+/home/lukas/git/FFClient/src/main/java/ffclient/DemoApplicationConfiguration.java
+/home/lukas/git/FFClient/src/main/java/ffclient/db/srv/types/TBaseType_SRV.java
+/home/lukas/git/FFClient/src/main/java/ffclient/db/base/TDBConnection.java
+/home/lukas/git/FFClient/src/main/java/ffclient/logon/TLogonPane.java
+/home/lukas/git/FFClient/src/main/java/ffclient/db/srv/types/TUserType_SRV.java
+/home/lukas/git/FFClient/src/main/java/ffclient/DemoApplication.java
