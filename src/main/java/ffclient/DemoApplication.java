@@ -42,7 +42,7 @@ public class DemoApplication implements EntryPoint {
 	private void getInitialData() {
 		TUserType_SRV hUserApi = new TUserType_SRV(TDBConnection.fConnection);
 		try {
-			hUserApi.load();
+			hUserApi.loadAll();
 			fAllUsers = hUserApi.getAllUsers();
 		} catch (SQLException e) {
 			e.printStackTrace();

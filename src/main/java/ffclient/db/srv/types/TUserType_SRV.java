@@ -19,8 +19,7 @@ public class TUserType_SRV extends TBaseType_SRV {
 		super(aConnection);
 	}
 
-	@Override
-	public void load() throws SQLException {
+	public void loadAll() throws SQLException {
 		Statement stmt = fConn.createStatement();
 
 		String sql = "SELECT * FROM FF_USER ";
@@ -35,8 +34,7 @@ public class TUserType_SRV extends TBaseType_SRV {
 	}
 
 	@SuppressWarnings("rawtypes")
-	@Override
-	public boolean save() {
+	public boolean saveAll() {
 
 		boolean hRet = true;
 
@@ -68,4 +66,17 @@ public class TUserType_SRV extends TBaseType_SRV {
 	public HashMap<Integer, TUser> getAllUsers() {
 		return fAllUsers;
 	}
+
+	@Override
+	public boolean save(Object aDbType) {
+		
+		return false;
+	}
+
+	@Override
+	public Object load(Object aDbType) throws SQLException {
+		return aDbType;
+		
+	}
+
 }

@@ -56,13 +56,16 @@ Label{
 	background-color: transparent;
 }
 
-Sash.hContent{
-	border-radius: 7px 7px 7px 7px; 
-}
-
-FileUpload {
-	border: 1px solid;
-	border-radius: 5px;
+FileUpload{
 	color: white;
 	background-color: blue;
+}
+
+TreeItem:selected{
+	color: black;
+	background-color: red;
+}
+
+Group{
+	border-radius: 15px 50px 5px 5px; 
 }

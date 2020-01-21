@@ -11,8 +11,14 @@ public abstract class TBaseType_SRV {
 		fConn = aConnection;
 	}
 	
-	public abstract void load()throws SQLException ;
+	public abstract void loadAll()throws SQLException ;
 	
-	public abstract boolean save();
+	public abstract Object load(Object aDbType)throws SQLException ;
+	
+	public abstract boolean saveAll();
+	
+	public abstract boolean save(Object aDbType);
+	
+	
 
 }

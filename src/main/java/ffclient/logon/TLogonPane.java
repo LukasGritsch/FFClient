@@ -78,7 +78,7 @@ public class TLogonPane {
 
 			fAllUsers.get(hNr);
 			fShell.dispose();
-			new TMainPane(fMainShell, SWT.BORDER,fAllUsers);
+			new TMainPane(fMainShell, SWT.BORDER,fAllUsers,hNr);
 			fMainShell.open();
 			return true;
 		}
@@ -141,22 +141,20 @@ public class TLogonPane {
 	private void setListener() {
 		fBtnLogon.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
-				if (fBtnrememberMe.getSelection()) {
-					int hId = logon(fUser, fPasswd);
-					if (hId != -1) {
+				int hId = logon(fUser, fPasswd);
+				if (hId != -1) {
+					if (fBtnrememberMe.getSelection()) {
 						try {
 							RWT.getSettingStore().setAttribute("login", "" + hId);
 						} catch (IOException e1) {
 							e1.printStackTrace();
 						}
-						fShell.dispose();
-						new TMainPane(fMainShell, SWT.BORDER,fAllUsers);
-						fMainShell.open();
-					} else {
-
 					}
+					fShell.dispose();
+					new TMainPane(fMainShell, SWT.BORDER, fAllUsers,hId);
+					fMainShell.open();
 				} else {
-
+					
 				}
 			}
 
